@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video Background with Navbar</title>
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+</head>
+<body>
+    <div class="video-container">
+        <video autoplay muted loop id="bg-video">
+            <source src="{% static 'videos/background.mp4' %}" type="video/mp4">
+            Your browser does not support HTML5 video.
+        </video>
+        <div class="overlay"></div>
+    </div>
+
+    <nav class="navbar">
+        <div class="navbar-container">
+            <a href="#" class="brand-logo">MySite</a>
+            <div class="nav-links">
+                <a href="{% url 'login' %}" class="login-btn">Login</a>
+                <a href="{% url 'register' %}" class="register-btn">Register</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="content">
+        <!-- Your content here -->
+    </div>
+</body>
+</html>
