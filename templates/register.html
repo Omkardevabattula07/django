@@ -1,0 +1,35 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <link rel="stylesheet" href="{% static 'css/register.css' %}">
+</head>
+<body style="background-image: url('{% static 'videos_images/astabackground.jpg' %}');">
+    <div class="register-box">
+        <h2>Register</h2>
+        
+        {% if messages %}
+            <div class="messages">
+                {% for message in messages %}
+                    <div class="alert {{ message.tags }}">{{ message }}</div>
+                {% endfor %}
+            </div>
+        {% endif %}
+        
+        <form id="register-form" method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+            <input type="text" name="username" placeholder="Username" required><br>
+            <input type="email" name="email" placeholder="Email" required><br>
+            <input type="password" name="password1" id="password1" placeholder="Password" required><br>
+            <input type="password" name="password2" id="password2" placeholder="Confirm Password" required><br>
+            <textarea name="bio" placeholder="Bio"></textarea><br>
+            <input type="file" name="profile_pic" accept="image/*"><br>
+            <input type="submit" value="Register">
+        </form>
+        <p>Already have an account? <a href="{% url 'login' %}">Login</a></p>
+    </div>
+</body>
+</html>

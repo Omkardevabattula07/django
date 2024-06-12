@@ -1,0 +1,93 @@
+.container {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f2f2f2;
+}
+
+.container form {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    width: 400px;
+    text-align: center;
+}
+
+h2 {
+    margin-bottom: 30px;
+}
+
+.login-img {
+    margin-bottom: 20px;
+}
+
+.login-img img {
+    width: 100%;
+    height: auto;
+}
+
+.input-container {
+    position: relative;
+    margin-bottom: 30px;
+}
+
+input[type="text"],
+input[type="password"] {
+    width: 100%;
+    padding: 15px;
+    border: none;
+    border-bottom: 2px solid #3498db;
+    outline: none;
+    font-size: 16px;
+    background: transparent;
+    transition: border-color 0.5s;
+}
+
+.username-label,
+.password-label {
+    position: absolute;
+    top: 15px;
+    left: 0;
+    transition: top 0.5s, font-size 0.5s;
+    color: #aaa;
+}
+
+input[type="text"]:focus,
+input[type="text"]:not(:placeholder-shown),
+input[type="password"]:focus,
+input[type="password"]:not(:placeholder-shown) {
+    border-color: #ff6b6b;
+}
+
+input[type="text"]:focus + .username-label,
+input[type="text"]:not(:placeholder-shown) + .username-label,
+input[type="password"]:focus + .password-label,
+input[type="password"]:not(:placeholder-shown) + .password-label {
+    top: -10px;
+    font-size: 12px;
+    color: #3498db;
+}
+
+button {
+    width: 100%;
+    padding: 15px;
+    border: none;
+    border-radius: 5px;
+    background-color: #3498db;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #2980b9;
+}
+
+p {
+    text-align: center;
+}
